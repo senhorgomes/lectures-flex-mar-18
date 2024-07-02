@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App</title>
+    <!-- React Library Core: -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- React Library DOM: -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel (for JSX Compatibility): -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <h1>My first React App</h1>
+    <div id="our-react-container"></div>
+    <script>
+        const domContainerElement = document.getElementById('our-react-container');
+        // Tell React which element our app should live in.
+        const reactRoot = ReactDOM.createRoot(domContainerElement);
+        // Create a renderable component.
+        class HelloComponent extends React.Component {
+            render() {
+                return React.createElement(
+                    'p', // Tagname.
+                    null,
+                    'Hello, World!'//Text node
+                );
+            }
+        }
+        reactRoot.render(React.createElement(HelloComponent, null, null));
+    </script>
+</body>
+</html>
