@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Core Styles */
+
+body {
+  background-color: hsl(206, 67%, 83%);
+}
+
+p,
+li,
+blockquote,
+a,
+span,
+h1,
+h2,
+h3,
+h4,
+button,
+input {
+  font-family: "Nanum Gothic Coding", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border: 3px solid hsl(27, 80%, 45%);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px 0px hsl(24, 99%, 27%);
+}
+
+button:hover {
+  background-color: hsl(27, 80%, 45%);
+  color: white;
+}
+
+button:active {
+  background-color: hsl(27, 80%, 45%);
+  box-shadow: none;
+}
+
+input {
+  padding-inline: 0.5rem;
+  padding-block: 0.5rem;
+  border: 3px solid hsl(27, 80%, 45%);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 2px 0px hsl(24, 99%, 27%);
+}
+
+/* Utilities */
+
+.row {
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-item-grow * {
+  flex-grow: 1;
+}
+
+.flow > * + * {
+  margin-top: 1rem;
+}
+
+/* Blocks */
+
+.card {
+  border: 5px solid hsl(24, 60%, 39%);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Exceptions */
+
+/* Big Title */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+header > h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+
